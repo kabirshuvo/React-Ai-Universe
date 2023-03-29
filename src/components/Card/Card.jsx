@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Ai from '../Ai/Ai';
 import Button from '../Button/Button';
+import Modal from '../Modal/Modal';
 
 const Card = () => {
     const [ais, setAis] = useState([]);
@@ -35,11 +36,12 @@ useEffect(()=>{
         
         
        </div>
-       {!all && (
-        <span onClick={()=> showAllAis()}>
-        <Button>See More</Button>
-    </span> 
-       )}      
+            {!all && (
+                    <span onClick={()=> showAllAis()}>
+                    <Button>See More</Button>
+                    </span> 
+            )}
+            <Modal/>      
        </>
     );
 };
