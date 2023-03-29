@@ -4,7 +4,10 @@ import Button from '../Button/Button';
 
 const Card = () => {
     const [ais, setAis] = useState([]);
-    const [all, setAll] = useState(false);
+    const [all, setAll] = useState(false); //show all btn's
+    const showAllAis = () => {
+        setAll(true);
+    };
 
 useEffect(()=>{
     const loadAis = async () => {
@@ -17,6 +20,8 @@ useEffect(()=>{
 }, [ ]);
 
 
+
+
     return (
        <>
        <div>
@@ -27,13 +32,14 @@ useEffect(()=>{
             }
         </div>
 
-        <div>
-        <p onClick={()=> showAllAis()}>
-                    <Button>See More</Button>
-                    </p>
-        </div>
+        
+        
        </div>
-                   
+       {!all && (
+        <span onClick={()=> showAllAis()}>
+        <Button>See More</Button>
+    </span> 
+       )}      
        </>
     );
 };

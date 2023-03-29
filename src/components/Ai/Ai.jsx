@@ -31,9 +31,9 @@ const Ai = (props) => {
         </div>
         
     </div>
-    <p onClick={()=> showAllAis()}>
+    {/* <p onClick={()=> showAllAis()}>
         <Button>See More</Button>
-        </p>
+        </p> */}
 </>
     );
 };
