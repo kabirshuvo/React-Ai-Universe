@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Button/Button';
 
 const Ai = (props) => {
     const {name, image, description, published_in, links, features} = props.ai;
@@ -28,7 +29,11 @@ const Ai = (props) => {
             </div>
             
         </div>
+        
     </div>
+    <p onClick={()=> showAllAis()}>
+        <Button>See More</Button>
+        </p>
 </>
     );
 };
