@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './components/Button/Button';
+import Card from './components/Card/Card';
 import Header from './components/Header/Header';
 
 const App = () => {
@@ -7,9 +8,8 @@ const App = () => {
     <div>
       <Header/>
       <Button>Sort By date</Button>
-      <Button>View More</Button>
-      <Button>De Dour</Button>
-      <Button>Love You Programming</Button>
+      <Card/>
+      <Button>See More</Button>
     </div>
   );
 };

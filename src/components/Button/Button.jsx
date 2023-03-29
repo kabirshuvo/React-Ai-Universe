@@ -1,13 +1,10 @@
 import React from 'react';
 
 const Button = ({children}) => {
-    console.log(children.length)
     return (
-        <div>
+        <div className='text-center py-7'>
 <button className="btn btn-info">{children}</button>
-<button className="btn btn-success">{children}</button>
-<button className="btn btn-warning">{children}</button>
-<button className="btn btn-error">{children}</button>
+
         </div>
     );
 };
