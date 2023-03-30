@@ -26,7 +26,7 @@ const Modal = (props) => {
                         <p className='text-2xl'>Intigrations</p>
                         
                         {integrations &&
-                        integrations.map(int => <p>{int? int : 'no int'}</p>)}
+                        integrations?.map(int => <p>{int? int : 'no int'}</p>)}
                         
                         </div>
                     </div>

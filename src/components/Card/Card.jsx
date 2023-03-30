@@ -13,6 +13,13 @@ const Card = () => {
         setAll(true);
     };
 
+    const sortByDate = () => {
+        const sortedAis = ais.sort((a, b)=>{
+            return new Date(b.published_in) - new Date(a.published_in)
+        });
+        setAis([...ais, sortedAis])
+    };
+
 useEffect(()=>{
     fetch(`https://openapi.programming-hero.com/api/ai/tool/${aiId}`)
     .then(resp => resp.json())
@@ -34,6 +41,9 @@ useEffect(()=>{
 
     return (
        <>
+        <span onClick={()=>sortByDate()}>
+        <Button>Sort By date</Button>
+        </span>
        <div>
        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             

@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <Header/>
-      <Button>Sort By date</Button>
+     
       <Card />
       
     </div>
